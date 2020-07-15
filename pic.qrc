@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/backgroud">
+        <file>pic/mole.png</file>
+        <file>pic/background.png</file>
+        <file>pic/Icon.png</file>
+    </qresource>
+    <qresource prefix="/mole">
+        <file>pic/mole_1.png</file>
+        <file>pic/mole_2.png</file>
+        <file>pic/mole_3.png</file>
+        <file>pic/mole_4.png</file>
+    </qresource>
+    <qresource prefix="/hammer">
+        <file>pic/hammer_1.png</file>
+        <file>pic/hammer_2.png</file>
+    </qresource>
+</RCC>
