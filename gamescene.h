@@ -12,14 +12,17 @@ public:
     explicit gameScene(QObject *parent = nullptr);
 
 signals:
-
+    void notifyGameTime(int gameTime);
 public slots:
-    void showMole();//地鼠探头
-    void startGame();//开始游戏
-    void pauseGame();//暂停游戏
+    void showMole();
+    void updateGameTime();
+    void startGame();
 private:
-    myItem * item[16];//设置16个图元对象
-    QTimer * p_timer;//计时器
+    myItem * item[16];
+    QTimer * p_timer;
+    QTimer * p_timerFast;
+    qint64 m_startTime;
+
 };
 
 #endif // GAMESCENE_H

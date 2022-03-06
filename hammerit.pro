@@ -6,9 +6,17 @@
 
 QT       += core gui
 
+
+CONFIG+=static
+QMAKE_LFLAGS+=-static -static-libgcc -static-libstdc++ -lstdc++
+DEFINES+=STATIC
+VERSION = 1.0.0
+
+DEFINES += QT_DEPRECATED_WARNINGS
+CONFIG += c++11
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Whack_A_Mole
+TARGET = HammerIt
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -28,16 +36,32 @@ SOURCES += \
         mainwindow.cpp \
     gamescene.cpp \
     myitem.cpp \
-    handler.cpp
+    handler.cpp \
+    soundplayer.cpp
 
 HEADERS += \
         mainwindow.h \
     gamescene.h \
     myitem.h \
-    handler.h
+    handler.h \
+    soundplayer.h \
+    globals.h
 
 FORMS += \
         mainwindow.ui
 
 RESOURCES += \
     pic.qrc
+
+
+INCLUDEPATH +=$$(PORT_AUDIO_ROOT)/include
+LIBS += $$PWD/audio/music.raw.o
+LIBS += $$PWD/audio/event.raw.o
+LIBS += $$PWD/audio/fail.raw.o
+LIBS += $$PWD/audio/win.raw.o
+
+LIBS += -L$$(PORT_AUDIO_ROOT)/lib/ -lportaudio
+
+
+INCLUDEPATH +=$$(SHOWLICENSE_ROOT)
+LIBS += -L$$(SHOWLICENSE_ROOT) -lshowlicense

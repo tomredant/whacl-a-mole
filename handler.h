@@ -2,21 +2,32 @@
 #define HANDLER_H
 
 #include <QObject>
-
-class handler : public QObject
+class QThread;
+class SoundPlayer;
+class Handler : public QObject
 {
     Q_OBJECT
 public:
-    static handler *getInstance();//获取hand
-    void addScore();//加分函数
+    static Handler *getInstance();
+    void addScore();
+    void subtractScore();
+
 private:
-    explicit handler(QObject *parent = nullptr);
+    explicit Handler(QObject *parent = nullptr);
 
 signals:
-    void whackmole();//信号，表示敲到了地鼠
+    void whackMole();
+    void whackWrongMole();
+
 public slots:
+    void playSound();
 private:
-    static handler * hand;
+    static Handler * hand;
+    SoundPlayer* m_player;
+    QThread* m_musicThread;
+
+    SoundPlayer* m_player2;
+    QThread* m_musicThread2;
 };
 
 #endif // HANDLER_H

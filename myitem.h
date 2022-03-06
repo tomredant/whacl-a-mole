@@ -7,15 +7,15 @@ class myItem : public QGraphicsPixmapItem
 {
 public:
     myItem();
-    void setPic(QString path);//展示图片
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);//鼠标按下
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);//鼠标抬起
-    void setMole(bool mole);//设定某地是否有地鼠
-    bool isMole();//true表示有地鼠
-    void setStart(bool start);//设定游戏进行状态
-    bool isStart();//true表示游戏正在进行
+    void setPic(QString path);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
+    void setMole(int mole);
+    int isMole();
+    void setStart(bool start);
+    bool isStart();
 private:
-    bool mole;
+    int mole;
     bool start;
 };
 
