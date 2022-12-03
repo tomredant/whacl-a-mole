@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/backgroud">
         <file>pic/mole.png</file>
-        <file>pic/Icon.png</file>
     </qresource>
     <qresource prefix="/mole">
         <file>pic/mole_2.png</file>
@@ -17,9 +16,7 @@
         <file>pic/hammer.ico</file>
         <file>pic/icon_mute.png</file>
         <file>pic/icon_sound.png</file>
-        <file>pic/logo_Hammer4.png</file>
         <file>pic/grass.png</file>
         <file>pic/caveman.png</file>
-
     </qresource>
 </RCC>

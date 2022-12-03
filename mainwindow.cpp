@@ -18,9 +18,9 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     this->sc = new gameScene;
     this->ui->graphicsView->setScene(sc);
-    setStyleSheet("QGraphicsView { background: rgb(255, 228, 49);border:0px }");
-    setStyleSheet("QMainWindow { background: rgb(255, 228, 49);}");
-    //QPushButton{ background-color: rgb(255, 228, 49);}
+    setStyleSheet("QGraphicsView { background: rgb(102, 128, 0);border:0px }");
+    setStyleSheet("QMainWindow { background: rgb(102, 128, 0);}");
+    //QPushButton{ background-color: rgb(102, 128, 0);}
     //setStyleSheet("");
 
 
@@ -142,21 +142,12 @@ void MainWindow::clickAbout() {
     libs.push_back("MinGW-W64-builds-4.3.5##MinGW-w64");
     libs.push_back("libstdc++-6##gpl-3.0_runtime_exception");
     libs.push_back(R"MYSTRING(Artwork and Audio##
-Artwork purchased from Shutterstock under the terms of a Standard License for Hammer-IMS nv.
-Shutterstock image references:
+Images obtained from:
+https://www.clipsafari.com/clips/o168496-mole-with-buck-teeth
+https://www.clipsafari.com/clips/o172886-hammer
+https://www.clipsafari.com/clips/o171366-grass-image
 
-777735502
-1918409366
-1483995575
-1924474265
-
-Audio from Audiojungle under the terms of a commercial license for Hammer-IMS nv.
-
-https://audiojungle.net/item/metal-impact/32309247 (SFX (Single Use))
-https://audiojungle.net/item/failed/3193419 (SFX (Single Use))
-https://audiojungle.net/item/coins-game/35941516 (SFX (Single Use))
-https://audiojungle.net/item/game-play/25351031 (Music Standard License)
-
+Sounds created by Tom Redant by means of Garage Band for iOS.
 )MYSTRING");
 
     populateLicenseDialog(libs);

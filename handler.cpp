@@ -28,12 +28,14 @@ Handler * Handler::getInstance()
 void Handler::addScore()
 {
     emit whackMole();
+    m_player2->interruptEventSound();
     QMetaObject::invokeMethod(m_player2, "playWinSound");
 }
 
 void Handler::subtractScore()
 {
     emit whackWrongMole();
+    m_player2->interruptEventSound();
     QMetaObject::invokeMethod(m_player2, "playFailSound");
 }
 

@@ -67,8 +67,8 @@
      </item>
      <item row="4" column="0">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <spacer name="horizontalSpacer_4">
+       <item row="0" column="5">
+        <spacer name="horizontalSpacer_7">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -122,7 +122,7 @@
             </font>
            </property>
            <property name="text">
-            <string>&lt;font color=&quot;#3D3D3D&quot;&gt;Don't act like a caveman!&lt;/font&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;Verjaag de mollen!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -153,7 +153,7 @@
             </font>
            </property>
            <property name="text">
-            <string>&lt;font color=&quot;#3D3D3D&quot;&gt;Get yourself a Hammer!&lt;/font&gt;</string>
+            <string>&lt;font color=&quot;#3D3D3D&quot;&gt;Gebruik de hamer!&lt;/font&gt;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -165,8 +165,8 @@
          </item>
         </layout>
        </item>
-       <item row="0" column="5">
-        <spacer name="horizontalSpacer_7">
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer_4">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -197,9 +197,6 @@
          </property>
          <property name="text">
           <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap resource="pic.qrc">:/pic/logo_Hammer4.png</pixmap>
          </property>
         </widget>
        </item>
@@ -357,7 +354,7 @@
           </size>
          </property>
          <property name="text">
-          <string>About</string>
+          <string>Over</string>
          </property>
         </widget>
        </item>
@@ -376,7 +373,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Restart</string>
+          <string>Herstart</string>
          </property>
         </widget>
        </item>
